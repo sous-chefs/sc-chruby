@@ -1,12 +1,12 @@
-name              'chruby'
+name              'sc-chruby'
 maintainer        'Sous Chefs'
 maintainer_email  'help@sous-chefs.org'
 license           'Apache-2.0'
 description       'Installs and configures chruby'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version           '0.0.1'
-source_url        'https://github.com/sous-chefs/chruby'
-issues_url        'https://github.com/sous-chefs/chruby/issues'
+source_url        'https://github.com/sous-chefs/sc-chruby'
+issues_url        'https://github.com/sous-chefs/sc-chruby/issues'
 chef_version      '>= 14.0'
 
 supports 'debian'
