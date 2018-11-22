@@ -19,8 +19,8 @@ action :install do
   tar_path = ::File.join(Chef::Config[:file_cache_path], 'chruby.tar.gz')
   postmodern_pgp_key_path = ::File.join(Chef::Config[:file_cache_path], 'postmodern.asc')
 
-  package 'gpg'
-  # build_essential 'compile tools'
+  package gpg_package
+  package 'make'
 
   remote_file tar_path do
     source new_resource.download_url
@@ -66,26 +66,19 @@ action :install do
     action :nothing
   end
 
-  cookbook_file '/etc/profile.d/chruby.sh' do
+  cookbook_file ::File.join(d_directory, 'chruby.sh') do
     source 'chruby.sh'
     cookbook 'chruby'
-    not_if platform_family?('mac_os_x')
-  end
-
-  # Use a conf.d like directory for the chruby script on MacOS
-  # https://chr4.org/blog/2014/09/10/conf-dot-d-like-directories-for-zsh-slash-bash-dotfiles/
-  d_directory = ::File.join(Dir.home(new_resource.user),
-                             shell_type(new_resource.user) + 'rc.d')
-
-  cookbook_file File.join(d_directory, 'chruby.sh') do
-    source 'chruby.sh'
-    cookbook 'chruby'
-    only_if platform_family?('mac_os_x')
-    notifies :write, 'log[macos_users]', :immediately
+    notifies :write, 'log[macos_users]', :immediately if platform_family?('mac_os_x')
   end
 
   log 'macos_users' do
     message "Please add a script to load your #{d_directory} contents into your shell"
     level :info
+    action :nothing
   end
+end
+
+action_class do
+  include Chef::Chruby::Helpers
 end
