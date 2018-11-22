@@ -1,5 +1,7 @@
 # chruby Cookbook CHANGELOG
 
-This file is used to list changes made in each version of the haproxy cookbook.
+This file is used to list changes made in each version of the chruby cookbook.
 
-## [unreleased]
+## [0.0.1]
+
+- Initial release

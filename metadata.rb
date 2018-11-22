@@ -9,7 +9,6 @@ source_url        'https://github.com/sous-chefs/chruby'
 issues_url        'https://github.com/sous-chefs/chruby/issues'
 chef_version      '>= 14.0'
 
-requires 'line'
 supports 'debian'
 supports 'ubuntu'
 supports 'centos'
