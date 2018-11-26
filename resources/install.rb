@@ -14,6 +14,8 @@ property :user, String,
          default: 'root',
          description: 'Username to install chruby for. On MacOS change this to your local user'
 
+resource_name :chruby_install
+
 action :install do
   chruby_pgp_key_path = ::File.join(Chef::Config[:file_cache_path], 'chruby.tar.gz.asc')
   tar_path = ::File.join(Chef::Config[:file_cache_path], 'chruby.tar.gz')
