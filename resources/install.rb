@@ -13,6 +13,9 @@ property :chruby_version, String,
 property :user, String,
          default: 'root',
          description: 'Username to install chruby for. On MacOS change this to your local user'
+property :template_cookbook, String,
+         default: 'sc-chruby',
+         description: ''
 
 resource_name :chruby_install
 
@@ -70,7 +73,7 @@ action :install do
 
   cookbook_file ::File.join(d_directory, 'chruby.sh') do
     source 'chruby.sh'
-    cookbook 'chruby'
+    cookbook new_resource.template_cookbook
     notifies :write, 'log[macos_users]', :immediately if platform_family?('mac_os_x')
   end
 
