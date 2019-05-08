@@ -1,2 +1,1 @@
-
 chruby_install ''
