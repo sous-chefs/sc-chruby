@@ -1,7 +1,7 @@
 ---
 driver:
   name: dokken
-  privileged: true # because Docker and SystemD/Upstart
+  privileged: true
   env: [CHEF_LICENSE=accept]
 
 transport:
@@ -33,7 +33,7 @@ platforms:
       image: dokken/centos-6
       platform: rhel
       pid_one_command: /sbin/init
-      
+
   - name: centos-7
     driver:
       image: dokken/centos-7
