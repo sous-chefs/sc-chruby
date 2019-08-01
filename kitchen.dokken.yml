@@ -59,11 +59,6 @@ platforms:
       intermediate_instructions:
         - RUN /usr/bin/apt-get update
 
-  - name: opensuse-leap
-    driver:
-      image: dokken/opensuse-leap
-      pid_one_command: /bin/systemd
-
   - name: amazonlinux
     driver:
       image: dokken/amazonlinux
