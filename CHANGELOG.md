@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the chruby cookbook.
 
+## Unreleased
+
+- resolved cookstyle error: resources/install.rb:20:1 warning: `ChefDeprecations/ResourceUsesOnlyResourceName`
+
 ## 0.1.0 - 2020-05-05
 
 - Fixed the supported platform in the metadata to be mac_os_x not macos, which is not a valid platform
