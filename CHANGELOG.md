@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the chruby cookbook.
 
-## Unreleased
+## 0.1.1 - 2020-06-02
 
 - resolved cookstyle error: resources/install.rb:20:1 warning: `ChefDeprecations/ResourceUsesOnlyResourceName`
 
