@@ -2,7 +2,7 @@ class Chef
   module Chruby
     module Helpers
       def shell_type(user)
-        shell = Mixlib::ShellOut.new("dscl localhost -read /Local/Default/Users/#{user} UserShell").run_command.stdout.strip
+        shell = shell_out("dscl localhost -read /Local/Default/Users/#{user} UserShell").stdout.strip
         # Get the last item inthe array as we only want the shell type not the location
         shell.split('/')[-1]
       end
@@ -18,7 +18,7 @@ class Chef
       end
 
       def gpg_package
-        if node['platform_family'] == 'debian'
+        if platform_family?('debian')
           'gnupg'
         else
           'gpg'
