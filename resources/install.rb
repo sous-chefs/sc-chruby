@@ -18,6 +18,7 @@ property :template_cookbook, String,
          description: ''
 
 provides :chruby_install
+unified_mode true
 
 action :install do
   chruby_pgp_key_path = ::File.join(Chef::Config[:file_cache_path], 'chruby.tar.gz.asc')
