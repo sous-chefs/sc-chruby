@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the chruby cookbook.
 
 ## Unreleased
 
+- resolved cookstyle error: resources/install.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
 ## 0.1.4 - *2021-08-18*
 
 Standardise files with files in sous-chefs/repo-management
