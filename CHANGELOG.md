@@ -4,9 +4,12 @@ This file is used to list changes made in each version of the chruby cookbook.
 
 ## Unreleased
 
+- Enable unified_mode on the install resource for Chef 17+ compatability
+- Require Chef 15.3 for unified mode support
+
 ## 0.1.4 - *2021-08-18*
 
-Standardise files with files in sous-chefs/repo-management
+- Standardise files with files in sous-chefs/repo-management
 
 ## 0.1.2 - 2020-09-16
 
