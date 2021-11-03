@@ -1,3 +1,7 @@
+unified_mode true
+
+provides :chruby_install
+
 property :download_url, String,
          default: 'https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz',
          description: 'Download URL'
@@ -16,8 +20,6 @@ property :user, String,
 property :template_cookbook, String,
          default: 'sc-chruby',
          description: ''
-
-provides :chruby_install
 
 action :install do
   chruby_pgp_key_path = ::File.join(Chef::Config[:file_cache_path], 'chruby.tar.gz.asc')
