@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the chruby cookbook.
 
 ## Unreleased
 
+- Remove delivery folder
+
 ## 0.2.0 - *2021-11-03*
 
 - Enable unified_mode on the install resource for Chef 17+ compatability
