@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the chruby cookbook.
 
+## Unreleased
+
 ## 0.2.2 - *2023-02-14*
 
 ## 0.2.1 - *2022-02-08*
