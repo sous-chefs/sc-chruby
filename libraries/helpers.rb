@@ -4,7 +4,7 @@ class Chef
       def shell_type(user)
         shell = shell_out("dscl localhost -read /Local/Default/Users/#{user} UserShell").stdout.strip
         # Get the last item inthe array as we only want the shell type not the location
-        shell.split('/')[-1]
+        shell.split('/').last
       end
 
       def d_directory
