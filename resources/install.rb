@@ -52,13 +52,13 @@ action :install do
   end
 
   execute 'Import GPG Key' do
-    command "gpg --import #{postmodern_pgp_key_path}"
+    command "gpg --batch --no-tty --import #{postmodern_pgp_key_path}"
     notifies :run, 'execute[verify tar]', :immediately
     action :nothing
   end
 
   execute 'verify tar' do
-    command "gpg --verify #{chruby_pgp_key_path} #{tar_path}"
+    command "gpg --batch --no-tty --verify #{chruby_pgp_key_path} #{tar_path}"
     notifies :run, 'execute[install chruby]', :immediately
     action :nothing
   end

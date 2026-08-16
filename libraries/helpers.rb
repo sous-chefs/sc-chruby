@@ -21,7 +21,7 @@ class Chef
         if platform_family?('debian')
           'gnupg'
         else
-          'gnupg2'
+          'gpg'
         end
       end
     end
