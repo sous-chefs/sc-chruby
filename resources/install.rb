@@ -27,7 +27,6 @@ action :install do
   postmodern_pgp_key_path = ::File.join(Chef::Config[:file_cache_path], 'postmodern.asc')
 
   package gpg_package
-  package 'gpg-agent'
   package 'make'
 
   remote_file tar_path do
