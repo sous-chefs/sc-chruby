@@ -26,6 +26,11 @@ action :install do
   tar_path = ::File.join(Chef::Config[:file_cache_path], 'chruby.tar.gz')
   postmodern_pgp_key_path = ::File.join(Chef::Config[:file_cache_path], 'postmodern.asc')
 
+  if gpg_minimal_package
+    package gpg_minimal_package do
+      action :remove
+    end
+  end
   package gpg_package
   package 'make'
 
@@ -52,7 +57,7 @@ action :install do
   end
 
   execute 'Import GPG Key' do
-    command "gpg --batch --no-tty --import-options import-local --import #{postmodern_pgp_key_path}"
+    command "gpg --batch --no-tty --import #{postmodern_pgp_key_path}"
     notifies :run, 'execute[verify tar]', :immediately
     action :nothing
   end

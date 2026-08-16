@@ -20,9 +20,15 @@ class Chef
       def gpg_package
         if platform_family?('debian')
           'gnupg'
+        elsif platform_family?('amazon')
+          'gnupg2-full'
         else
           'gpg'
         end
+      end
+
+      def gpg_minimal_package
+        'gnupg2-minimal' if platform_family?('amazon')
       end
     end
   end
