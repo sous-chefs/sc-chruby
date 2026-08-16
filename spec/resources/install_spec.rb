@@ -10,6 +10,7 @@ describe 'chruby_install' do
     end
 
     it { create_file('chruby.tar.gz.asc') }
+    it { install_package('tar') }
   end
 
   context 'on Amazon Linux' do

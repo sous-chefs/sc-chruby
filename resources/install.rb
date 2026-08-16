@@ -30,6 +30,7 @@ action :install do
     options '--allowerasing' if platform_family?('amazon')
   end
   package 'make'
+  package 'tar'
 
   remote_file tar_path do
     source new_resource.download_url
