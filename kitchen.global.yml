@@ -3,6 +3,7 @@ provisioner:
   name: chef_infra
   product_name: chef
   product_version: <%= ENV['CHEF_VERSION'] || 'latest' %>
+  policyfile: Policyfile.rb
   channel: stable
   install_strategy: once
   chef_license: accept
