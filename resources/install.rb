@@ -52,7 +52,7 @@ action :install do
   end
 
   execute 'Import GPG Key' do
-    command "gpg --batch --no-tty --import #{postmodern_pgp_key_path}"
+    command "gpg --batch --no-tty --import-options import-local --import #{postmodern_pgp_key_path}"
     notifies :run, 'execute[verify tar]', :immediately
     action :nothing
   end
