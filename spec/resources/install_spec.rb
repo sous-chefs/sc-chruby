@@ -19,7 +19,6 @@ describe 'chruby_install' do
       chruby_install ''
     end
 
-    it { remove_package('gnupg2-minimal') }
     it { install_package('gnupg2-full') }
   end
 end

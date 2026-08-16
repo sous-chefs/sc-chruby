@@ -26,10 +26,6 @@ class Chef
           'gpg'
         end
       end
-
-      def gpg_minimal_package
-        'gnupg2-minimal' if platform_family?('amazon')
-      end
     end
   end
 end

@@ -26,12 +26,9 @@ action :install do
   tar_path = ::File.join(Chef::Config[:file_cache_path], 'chruby.tar.gz')
   postmodern_pgp_key_path = ::File.join(Chef::Config[:file_cache_path], 'postmodern.asc')
 
-  if gpg_minimal_package
-    package gpg_minimal_package do
-      action :remove
-    end
+  package gpg_package do
+    options '--allowerasing' if platform_family?('amazon')
   end
-  package gpg_package
   package 'make'
 
   remote_file tar_path do
