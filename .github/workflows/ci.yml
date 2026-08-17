@@ -24,12 +24,12 @@ jobs:
     strategy:
       matrix:
         os:
-          - "debian-8"
-          - "debian-9"
-          - "centos-6"
-          - "centos-7"
-          - "ubuntu-1604"
-          - "ubuntu-1804"
+          - "almalinux-8"
+          - "almalinux-9"
+          - "amazonlinux-2023"
+          - "centos-stream-9"
+          - "debian-12"
+          - "ubuntu-2204"
         suite:
           - "default"
       fail-fast: false
