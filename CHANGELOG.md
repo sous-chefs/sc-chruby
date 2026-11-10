@@ -2,6 +2,18 @@
 
 This file is used to list changes made in each version of the chruby cookbook.
 
+## [0.3.0](https://github.com/sous-chefs/sc-chruby/compare/v0.2.7...v0.3.0) (2026-11-10)
+
+
+### Features
+
+* migrate sc-chruby to Policyfile ([e5f82ef](https://github.com/sous-chefs/sc-chruby/commit/e5f82ef422c44ab9fdfb255c830325c5a68d9bdc))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#72](https://github.com/sous-chefs/sc-chruby/issues/72)) ([f8f2c01](https://github.com/sous-chefs/sc-chruby/commit/f8f2c01de9fbf633fb7cc96b8fd54daf76d69dff))
+
 ## [0.2.7](https://github.com/sous-chefs/sc-chruby/compare/0.2.6...v0.2.7) (2025-10-16)
 
 
