@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the chruby cookbook.
 
+## [0.3.1](https://github.com/sous-chefs/sc-chruby/compare/v0.3.0...v0.3.1) (2026-11-26)
+
+
+### Bug Fixes
+
+* **ci:** grant PR title validation read access ([69f6e36](https://github.com/sous-chefs/sc-chruby/commit/69f6e361ac5ea1a51435c554021bef27a584137d))
+
 ## [0.3.0](https://github.com/sous-chefs/sc-chruby/compare/v0.2.7...v0.3.0) (2026-11-10)
 
 
